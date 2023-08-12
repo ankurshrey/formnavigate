@@ -17,6 +17,7 @@ const App = () => {
       />
       <DynamicForm forms={formConfig.forms} activeFormId={activeFormId} />
     </div>
+    
   );
 };
 
