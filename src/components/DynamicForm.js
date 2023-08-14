@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const DynamicForm = ({ forms, activeFormId }) => {
 
   const activeForm = forms.find((form) => form.id === activeFormId);
-
+console.log(activeForm);
   const [formData, setFormData] = useState({});
 
   const handleChange = (e) => {
