@@ -35,6 +35,7 @@ const DynamicForm = ({ forms, activeFormId }) => {
             required={field.required}
           />
         </div>
+        
       ))}
       <button type="submit">Submit</button>
     </form>
