@@ -1,44 +1,45 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import formConfig from "../config/formConfig";
+import generateValidationSchema from "./validation/formValidation";
 
-const DynamicForm = ({ forms, activeFormId }) => {
+const DynamicForm = ({ activeFormId }) => {
+  const activeForm = formConfig.forms.find((form) => form.id === activeFormId);
 
-  const activeForm = forms.find((form) => form.id === activeFormId);
-console.log(activeForm);
-  const [formData, setFormData] = useState({});
+  if (!activeForm) {
+    return <div>Form not found.</div>;
+  }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    // You can perform form submission or validation here
-  };
+  const validationSchema = generateValidationSchema(activeForm.fields);
 
   return (
-    <form onSubmit={handleSubmit}>
-      {activeForm.fields.map((field) => (
-        
-        <div key={field.name}>
-          <label>{field.label}</label>
-
-          <input
-            type={field.type}
-            name={field.name}
-            value={formData[field.name] || ''}
-            onChange={handleChange}
-            required={field.required}
-          />
-        </div>
-        
-      ))}
-      <button type="submit">Submit</button>
-    </form>
+    <Formik
+      initialValues={{}}
+      validationSchema={validationSchema}
+      onSubmit={(values) => {
+        console.log(values); // Form data after validation
+        // You can perform further actions here, like form submission
+      }}
+    >
+      <Form>
+        {activeForm.fields.map((field) => (
+          <div key={field.name}>
+            <label>{field.label}</label>
+            <Field
+              type={field.type}
+              name={field.name}
+              required={field.required}
+            />
+            <ErrorMessage
+              name={field.name}
+              component="div"
+              className="error"
+            />
+          </div>
+        ))}
+        <button type="submit">Submit</button>
+      </Form>
+    </Formik>
   );
 };
 
