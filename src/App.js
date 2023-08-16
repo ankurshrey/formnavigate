@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import FormNavigation from './component/FormNavigation';
-import DynamicForm from './component/DynamicForm';
+import FormNavigation from './components/FormNavigation';
+import DynamicForm from './components/DynamicForm';
 import formConfig from './config/formConfig';
 
 

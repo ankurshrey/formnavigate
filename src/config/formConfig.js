@@ -33,6 +33,23 @@ const formConfig ={
             "required": false
           }
         ]
+      },
+      {
+        "id": "form3",
+        "fields": [
+          {
+            "name": "phone",
+            "label": "phone",
+            "type": "number",
+            "required": true
+          },
+          {
+            "name": "lastName",
+            "label": "Last Name",
+            "type": "text",
+            "required": true
+          }
+        ]
       }
     ]
   }
