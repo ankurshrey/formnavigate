@@ -29,6 +29,8 @@ const DynamicForm = ({ activeFormId }) => {
               type={field.type}
               name={field.name}
               required={field.required}
+              min={field.min} 
+              max={field.max}
             />
             <ErrorMessage
               name={field.name}
