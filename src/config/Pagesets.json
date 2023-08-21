@@ -1,0 +1,122 @@
+{
+    "id": "GUID",
+    "name": "",
+    "description": "",
+    "panel": "vertical",
+    "caption": "show-on-top",
+    "page_sets": [
+        {
+            "id": "GUID",
+            "serial": 1,
+            "name": "",
+            "heading": "", /* This may contain the literal or reference of content in case of i18n */
+            "description": "", /* This may contain the literal or reference of content in case of i18n */
+            "panel": "vertical", /* This can be omitted and can be inherited */
+            "caption": "show-on-top", /* This can be omitted and can be inherited */
+            "pages": [
+                {
+                    "id": "GUID",
+                    "serial": 1,
+                    "name": "",
+                    "heading": "",
+                    "description": "",
+                    "panel": "vertical", /* This can be omitted and can be inherited */
+                    "caption": "show-on-top", /* This can be omitted and can be inherited */
+                    "sections": [
+                        {
+                            "id": "GUID",
+                            "serial": 1,
+                            "name": "",
+                            "heading": "",
+                            "description": "",
+                            "components": [
+                                {
+                                    "id": "GUID",
+                                    "serial": 1,
+                                    "name": "firstName",
+                                    "label": "First Name",
+                                    "type": "text",
+                                    "required": true,
+                                    "validation": {
+                                        "mandatory": true,
+                                        "min_length": 3,
+                                        "max_length": 20
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 1,
+                                    "name": "lastName",
+                                    "label": "Last Name",
+                                    "type": "text",
+                                    "required": true,
+                                    "validation": {
+                                        "mandatory": true,
+                                        "min_length": 3,
+                                        "max_length": 20
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 1,
+                                    "name": "email",
+                                    "label": "Email",
+                                    "type": "email",
+                                    "required": true,
+                                    "validation": {
+                                        "mandatory": true,
+                                        "min_length": 3,
+                                        "max_length": 20
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 1,
+                                    "name": "firstName",
+                                    "label": "First Name",
+                                    "type": "text",
+                                    "required": true,
+                                    "validation": {
+                                        "mandatory": true,
+                                        "min_length": 3,
+                                        "max_length": 20
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 2,
+                                    "name": "",
+                                    "label": "",
+                                    "description": "",
+                                    "type": "single-select",
+                                    "validation": {
+                                        "mandatory": true
+                                    },
+                                    "source": {
+                                        "type": "API",
+                                        "url": ""
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 3,
+                                    "name": "",
+                                    "label": "",
+                                    "description": "",
+                                    "type": "single-select",
+                                    "validation": {
+                                        "mandatory": true
+                                    },
+                                    "source": {
+                                        "type": "MASTER",
+                                        "var": "{masterData.ageRange}"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

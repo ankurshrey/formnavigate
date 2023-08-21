@@ -17,8 +17,7 @@ const DynamicForm = ({ activeFormId }) => {
       initialValues={{}}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        console.log(values); // Form data after validation
-        // You can perform further actions here, like form submission
+        console.log(values);
       }}
     >
       <Form>
@@ -29,6 +28,8 @@ const DynamicForm = ({ activeFormId }) => {
               type={field.type}
               name={field.name}
               required={field.required}
+              min={field.min} 
+              max={field.max}
             />
             <ErrorMessage
               name={field.name}
