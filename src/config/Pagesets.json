@@ -33,10 +33,49 @@
                                 {
                                     "id": "GUID",
                                     "serial": 1,
-                                    "name": "",
-                                    "label": "",
-                                    "description": "",
-                                    "type": "text-field",
+                                    "name": "firstName",
+                                    "label": "First Name",
+                                    "type": "text",
+                                    "required": true,
+                                    "validation": {
+                                        "mandatory": true,
+                                        "min_length": 3,
+                                        "max_length": 20
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 1,
+                                    "name": "lastName",
+                                    "label": "Last Name",
+                                    "type": "text",
+                                    "required": true,
+                                    "validation": {
+                                        "mandatory": true,
+                                        "min_length": 3,
+                                        "max_length": 20
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 1,
+                                    "name": "email",
+                                    "label": "Email",
+                                    "type": "email",
+                                    "required": true,
+                                    "validation": {
+                                        "mandatory": true,
+                                        "min_length": 3,
+                                        "max_length": 20
+                                    }
+                                },
+                                {
+                                    "id": "GUID",
+                                    "serial": 1,
+                                    "name": "firstName",
+                                    "label": "First Name",
+                                    "type": "text",
+                                    "required": true,
                                     "validation": {
                                         "mandatory": true,
                                         "min_length": 3,
