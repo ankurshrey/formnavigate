@@ -1,11 +1,11 @@
-import Components from "./dynamic-forms/Components";
-// import Sections from "./dynamic-forms/Sections";
+import PageSets from "./dynamic-forms/PageSets";
+// import CompData from "./json-component/form-data.json";
 
 function App() {
+  // const data = CompData.page_sets;
   return (
     <div className="App">
-      <Components />
-      {/* <Sections /> */}
+      <PageSets />
     </div>
   );
 }

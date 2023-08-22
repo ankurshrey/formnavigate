@@ -8,8 +8,8 @@
     {
       "id": "GUID",
       "serial": 1,
-      "name": "",
-      "heading": "",
+      "name": "Root_Page_Set",
+      "heading": "Root Page Set Component",
       "description": "",
       "panel": "vertical",
       "caption": "show-on-top",
@@ -17,17 +17,71 @@
         {
           "id": "GUID",
           "serial": 1,
-          "name": "",
-          "heading": "",
+          "name": "RootPage",
+          "heading": "Starting From Here",
           "description": "",
           "panel": "vertical",
           "caption": "show-on-top",
-          "sections": [
+          "sections1": [
             {
               "id": "GUID",
               "serial": 1,
-              "name": "",
-              "heading": "",
+              "name": "section_1",
+              "heading": "section part",
+              "description": "",
+              "components": [
+                {
+                  "id": "GUID",
+                  "serial": 1,
+                  "name": "name",
+                  "label": "Name",
+                  "description": "",
+                  "type": "text",
+                  "validation": {
+                    "mandatory": true,
+                    "min_length": 3,
+                    "max_length": 20
+                  }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 2,
+                  "name": "email",
+                  "label": "Email ID",
+                  "description": "",
+                  "type": "email",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "API",
+                    "url": ""
+                  }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 3,
+                  "name": "password",
+                  "label": "Password",
+                  "description": "",
+                  "type": "password",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "MASTER",
+                    "var": "{masterData.ageRange}"
+                  }
+                }
+              ]
+            }
+          ],
+          "sections2": [
+            {
+              "id": "GUID",
+              "serial": 1,
+              "name": "section_2",
+              "heading": "section part",
               "description": "",
               "components": [
                 {

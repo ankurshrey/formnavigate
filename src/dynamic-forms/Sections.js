@@ -1,10 +1,24 @@
 import React from "react";
-import CompData from "../json-component/form-data.json";
 
-const Sections = () => {
-  const data = CompData.page_sets[0].pages[0].sections;
+import Components from "./Components";
+
+const Sections = ({ sData }) => {
+  const data = sData;
+  const cData = data[0].components;
   console.log("Section Data ", data);
-  return <div>Sections</div>;
+  return (
+    <div>
+      <h2>Sections Data</h2>
+      {data.map((d) => (
+        <div>
+          <p>{d.serial}</p>
+          <p>{d.name}</p>
+          <p>{d.heading}</p>
+          <Components cData={cData} />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Sections;
