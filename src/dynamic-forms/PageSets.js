@@ -11,9 +11,9 @@ const PageSets = () => {
       <h2>PageSets Form</h2>
       {data.map((d) => (
         <div>
-          <p>{d.serial}</p>
+          {/* <p>{d.serial}</p>
           <p>{d.name}</p>
-          <p>{d.heading}</p>
+          <p>{d.heading}</p> */}
           <Pages pData={pData} />
         </div>
       ))}

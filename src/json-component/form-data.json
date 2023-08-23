@@ -60,6 +60,21 @@
                 },
                 {
                   "id": "GUID",
+                  "serial": 2,
+                  "name": "phone",
+                  "label": "Phone Number",
+                  "description": "",
+                  "type": "number",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "API",
+                    "url": ""
+                  }
+                },
+                {
+                  "id": "GUID",
                   "serial": 3,
                   "name": "password",
                   "label": "Password",
@@ -123,6 +138,24 @@
                   "source": {
                     "type": "MASTER",
                     "var": "{masterData.ageRange}"
+                  }
+                }
+              ]
+            }
+          ],
+          "sections_0": [
+            {
+              "id": "GUID",
+              "components": [
+                {
+                  "id": "GUID",
+                  "serial": 1,
+                  "name": "next",
+                  "label": "Next",
+                  "type": "button",
+                  "value": "Next",
+                  "validation": {
+                    "mandatory": true
                   }
                 }
               ]
