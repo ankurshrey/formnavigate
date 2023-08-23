@@ -22,7 +22,7 @@
           "description": "",
           "panel": "vertical",
           "caption": "show-on-top",
-          "sections1": [
+          "sections": [
             {
               "id": "GUID",
               "serial": 1,
@@ -74,9 +74,7 @@
                   }
                 }
               ]
-            }
-          ],
-          "sections2": [
+            },
             {
               "id": "GUID",
               "serial": 1,
