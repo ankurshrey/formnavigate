@@ -18,7 +18,7 @@
           "id": "GUID",
           "serial": 1,
           "name": "RootPage",
-          "heading": "Starting From Here",
+          "heading": "Starting From Here For Root Page",
           "description": "",
           "panel": "vertical",
           "caption": "show-on-top",
@@ -27,7 +27,7 @@
               "id": "GUID",
               "serial": 1,
               "name": "section_1",
-              "heading": "section part",
+              "heading": "section part 1",
               "description": "",
               "components": [
                 {
@@ -72,23 +72,31 @@
                     "type": "MASTER",
                     "var": "{masterData.ageRange}"
                   }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 3,
+                  "name": "confirmPassword",
+                  "label": "Confirm Password",
+                  "description": "",
+                  "type": "confirmpassword",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "MASTER",
+                    "var": "{masterData.ageRange}"
+                  }
                 }
-              ]
-            },
-            {
-              "id": "GUID",
-              "serial": 1,
-              "name": "section_2",
-              "heading": "section part",
-              "description": "",
-              "components": [
+              ],
+              "components2": [
                 {
                   "id": "GUID",
                   "serial": 1,
-                  "name": "name",
-                  "label": "Name",
+                  "name": "number",
+                  "label": "Ph Number",
                   "description": "",
-                  "type": "text",
+                  "type": "number",
                   "validation": {
                     "mandatory": true,
                     "min_length": 3,
@@ -98,10 +106,10 @@
                 {
                   "id": "GUID",
                   "serial": 2,
-                  "name": "email",
-                  "label": "Email ID",
+                  "name": "address",
+                  "label": "Address",
                   "description": "",
-                  "type": "email",
+                  "type": "textarea",
                   "validation": {
                     "mandatory": true
                   },
@@ -113,10 +121,25 @@
                 {
                   "id": "GUID",
                   "serial": 3,
-                  "name": "password",
-                  "label": "Password",
+                  "name": "number",
+                  "label": "Alter-Number",
                   "description": "",
-                  "type": "password",
+                  "type": "number",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "MASTER",
+                    "var": "{masterData.ageRange}"
+                  }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 4,
+                  "name": "fullname",
+                  "label": "Full Name",
+                  "description": "this is confirm password section",
+                  "type": "text",
                   "validation": {
                     "mandatory": true
                   },
