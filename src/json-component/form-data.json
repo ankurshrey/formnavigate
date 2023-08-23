@@ -18,7 +18,7 @@
           "id": "GUID",
           "serial": 1,
           "name": "RootPage",
-          "heading": "Starting From Here",
+          "heading": "Starting From Here For Root Page",
           "description": "",
           "panel": "vertical",
           "caption": "show-on-top",
@@ -27,7 +27,7 @@
               "id": "GUID",
               "serial": 1,
               "name": "section_1",
-              "heading": "section part",
+              "heading": "section part 1",
               "description": "",
               "components": [
                 {
@@ -60,11 +60,101 @@
                 },
                 {
                   "id": "GUID",
+                  "serial": 2,
+                  "name": "phone",
+                  "label": "Phone Number",
+                  "description": "",
+                  "type": "number",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "API",
+                    "url": ""
+                  }
+                },
+                {
+                  "id": "GUID",
                   "serial": 3,
                   "name": "password",
                   "label": "Password",
                   "description": "",
                   "type": "password",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "MASTER",
+                    "var": "{masterData.ageRange}"
+                  }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 3,
+                  "name": "confirmPassword",
+                  "label": "Confirm Password",
+                  "description": "",
+                  "type": "confirmpassword",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "MASTER",
+                    "var": "{masterData.ageRange}"
+                  }
+                }
+              ],
+              "components2": [
+                {
+                  "id": "GUID",
+                  "serial": 1,
+                  "name": "number",
+                  "label": "Ph Number",
+                  "description": "",
+                  "type": "number",
+                  "validation": {
+                    "mandatory": true,
+                    "min_length": 3,
+                    "max_length": 20
+                  }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 2,
+                  "name": "address",
+                  "label": "Address",
+                  "description": "",
+                  "type": "textarea",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "API",
+                    "url": ""
+                  }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 3,
+                  "name": "number",
+                  "label": "Alter-Number",
+                  "description": "",
+                  "type": "number",
+                  "validation": {
+                    "mandatory": true
+                  },
+                  "source": {
+                    "type": "MASTER",
+                    "var": "{masterData.ageRange}"
+                  }
+                },
+                {
+                  "id": "GUID",
+                  "serial": 4,
+                  "name": "fullname",
+                  "label": "Full Name",
+                  "description": "this is confirm password section",
+                  "type": "text",
                   "validation": {
                     "mandatory": true
                   },
@@ -74,55 +164,21 @@
                   }
                 }
               ]
-            },
+            }
+          ],
+          "sections_0": [
             {
               "id": "GUID",
-              "serial": 1,
-              "name": "section_2",
-              "heading": "section part",
-              "description": "",
               "components": [
                 {
                   "id": "GUID",
                   "serial": 1,
-                  "name": "name",
-                  "label": "Name",
-                  "description": "",
-                  "type": "text",
-                  "validation": {
-                    "mandatory": true,
-                    "min_length": 3,
-                    "max_length": 20
-                  }
-                },
-                {
-                  "id": "GUID",
-                  "serial": 2,
-                  "name": "email",
-                  "label": "Email ID",
-                  "description": "",
-                  "type": "email",
+                  "name": "next",
+                  "label": "Next",
+                  "type": "button",
+                  "value": "Next",
                   "validation": {
                     "mandatory": true
-                  },
-                  "source": {
-                    "type": "API",
-                    "url": ""
-                  }
-                },
-                {
-                  "id": "GUID",
-                  "serial": 3,
-                  "name": "password",
-                  "label": "Password",
-                  "description": "",
-                  "type": "password",
-                  "validation": {
-                    "mandatory": true
-                  },
-                  "source": {
-                    "type": "MASTER",
-                    "var": "{masterData.ageRange}"
                   }
                 }
               ]
