@@ -7,7 +7,7 @@ const Sections = ({ sData, activeSectionIndex }) => {
 
   return (
     <div>
-      <h2>Sections Data</h2>
+      <h2>Sections Data..</h2>
       <div>
         {section && (
           <>
